@@ -14,9 +14,14 @@ const app = express();
 
 // Middleware
 // app.use(cors());
+import cors from "cors";
+
 app.use(
   cors({
-    origin: "https://your-frontend.vercel.app",
+    origin: [
+      "http://localhost:5173",
+      "https://bda-leadflow.vercel.app",
+    ],
     credentials: true,
   })
 );
